@@ -9,11 +9,20 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+variables:
+  ServiceConnectionName: 'MyServiceConnection'
+  EnvironmentType: 'Test'
+  ResourceGroupName: 'MyResourceGroup'
+  DeploymentDefaultLocation: 'westus3'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+jobs:
+- job:
+  steps:
+  - task: AzureResourceManagerTemplateDeployment@3
+    inputs:
+      connectedServiceName: $(ServiceConnectionName)
+      location: $(DeploymentDefaultLocation)
+      resourceGroupName: $(ResourceGroupName)
+      csmFile: deploy/main.bicep
+      overrideParameters: >
+        -environmentType $(EnvironmentType)
