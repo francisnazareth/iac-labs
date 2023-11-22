@@ -23,6 +23,6 @@ jobs:
       connectedServiceName: $(ServiceConnectionName)
       location: $(DeploymentDefaultLocation)
       resourceGroupName: $(ResourceGroupName)
-      csmFile: deploy/main.bicep
+      csmFile: lab-6/main.bicep
       overrideParameters: >
         -environmentType $(EnvironmentType)
