@@ -1,8 +1,8 @@
 param location string = resourceGroup().location
-param storageAccountName string = 'toylaunch${uniqueString(resourceGroup().id)}'
-param appServicePlanName string = 'toylaunch${uniqueString(resourceGroup().id)}'
+param storageAccountName string = 'qelaunch${uniqueString(resourceGroup().id)}'
+param appServicePlanName string = 'qelaunch${uniqueString(resourceGroup().id)}'
 
-var appServiceAppName = 'toy-product-launch-plan'
+var appServiceAppName = 'qedemo-bicep-webapp'
 
 @allowed([
   'nonprod'
