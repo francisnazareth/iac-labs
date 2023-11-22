@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  ServiceConnectionName: 'francis-devops-conn'
+  ServiceConnectionName: 'fn-devops-sp1'
   EnvironmentType: 'Test'
   ResourceGroupName: 'rg-bicep-demo'
   DeploymentDefaultLocation: 'qatarcentral'
