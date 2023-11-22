@@ -11,7 +11,7 @@ pool:
 
 variables:
   ServiceConnectionName: 'fn-devops-sp1'
-  EnvironmentType: 'Test'
+  EnvironmentType: 'nonprod'
   ResourceGroupName: 'rg-bicep-demo'
   DeploymentDefaultLocation: 'qatarcentral'
 
